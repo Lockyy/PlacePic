@@ -1,5 +1,7 @@
-require "placepic/version"
+mydir = File.expand_path(File.dirname(__FILE__))
 
-module Placepic
-  # Your code goes here...
+Dir[mydir + '/placepic/*.rb'].each {|file| puts file; require file }
+
+module PlacePic
+  ActionView::Base.send :include, PlacePic::Placeholders
 end
