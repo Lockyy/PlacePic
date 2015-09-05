@@ -11,7 +11,7 @@ module PlacePic
     def placeholder_url(width, height, opts = {})
       url, style = PlacePic::Urls.url_and_style(opts)
 
-      "#{url}.com/#{style}/#{width}/#{height}"
+      "//#{url}.com/#{style}/#{width}/#{height}"
     end
   end
 end
