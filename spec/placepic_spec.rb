@@ -1,11 +1,5 @@
 require 'spec_helper'
 
-describe Placepic do
-  it 'has a version number' do
-    expect(Placepic::VERSION).not_to be nil
-  end
+describe PlacePic do
 
-  it 'does something useful' do
-    expect(false).to eq(true)
-  end
 end
