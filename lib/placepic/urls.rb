@@ -24,7 +24,7 @@ module PlacePic
 
       def url_and_style(opts = {})
         # Prettify the variables we'll be using.
-        requested_url = opts[:url]
+        requested_url = opts[:site]
         requested_style = opts[:style]
 
         # If the user asked for a specific URL then try and get them it.
@@ -34,7 +34,7 @@ module PlacePic
           # If they also requested a style, try to get them it.
           # Throw an error if that url doesn't support that style
           if requested_style
-            throw ArgumentError, 'Style not supported' unless URLS[opts[:url]][:styles].include? requested_style
+            throw ArgumentError, 'Style not supported' unless URLS[requested_url][:styles].include? requested_style
             return [requested_url, requested_style]
           end
           return [requested_url, random_style_for_url(requested_url)]
