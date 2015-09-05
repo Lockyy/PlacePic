@@ -2,7 +2,10 @@ module PlacePic
   class Urls
     class << self
       URLS = {
-        'placekitten' => {
+        'baconmockup' => {
+          styles: ['']
+        },
+        'placebear' => {
           styles: ['', 'g']
         },
         'stevensegallery' => {
