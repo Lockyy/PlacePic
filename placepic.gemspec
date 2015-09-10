@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Daniel Lockhart"]
   spec.email         = ["daniel@lockyy.com"]
 
-  spec.summary       = %q{Generate a random placeholder image from various placeholder sites.}
+  spec.summary       = %q{Generate a random placeholder image from various placeholder sites}
   spec.description   = %q{Generate a random placeholder image url or tag from
-                         baconmockup, placebear, stevensegallery, fillmurray,
+                         placebear, stevensegallery, fillmurray,
                          placecage, or lorempixel.}
   spec.homepage      = "https://github.com/Lockyy/PlacePic."
   spec.license       = "MIT"
