@@ -27,11 +27,11 @@ module PlacePic
         # If the user asked for a specific URL then try and get them it.
         # If it doesn't exist, throw an error.
         if requested_url
-          throw ArgumentError, 'URL not support' unless URLS.keys.include? requested_url
+          raise ArgumentError, 'Site not supported' unless URLS.keys.include? requested_url
           # If they also requested a style, try to get them it.
           # Throw an error if that url doesn't support that style
           if requested_style
-            throw ArgumentError, 'Style not supported' unless URLS[requested_url][:styles].include? requested_style
+            raise ArgumentError, 'Style not supported by this site' unless URLS[requested_url][:styles].include? requested_style
             return [requested_url, requested_style]
           end
           return [requested_url, random_style_for_url(requested_url)]
@@ -51,10 +51,8 @@ module PlacePic
         url = urls.sample(1)[0]
 
         return url if url
-        throw ArgumentError,
-              %q(Invalid Style Sent -
-                 No Supported Placeholder Sites With This Style -
-                 Try g, c, or gif)
+        raise ArgumentError,
+              %q(No Supported Placeholder Site With This Style - Try g, c, or gif)
       end
 
       # Get a random service, and a random style for that service
