@@ -1,0 +1,68 @@
+.example
+  .function placeholder_tag
+  .image
+    = placeholder_tag
+
+.example
+  .function placeholder_tag(200)
+  .image
+    = placeholder_tag(200)
+
+.example
+  .function placeholder_tag(100, 200)
+  .image
+    = placeholder_tag(100, 200)
+
+.example
+  .function placeholder_tag(700, 100)
+  .image
+    = placeholder_tag(700, 100)
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, site: 'placecage')
+  .image
+    = placeholder_tag(height, width, site: 'placecage')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, site: 'lorempixel')
+  .image
+    = placeholder_tag(height, width, site: 'lorempixel')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, site: 'placebear')
+  .image
+    = placeholder_tag(height, width, site: 'placebear')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, style: 'gif')
+  .image
+    = placeholder_tag(height, width, style: 'gif')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, style: 'g')
+  .image
+    = placeholder_tag(height, width, style: 'g')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, style: 'c')
+  .image
+    = placeholder_tag(height, width, style: 'c')
+
+- height = rand(100..200)
+- width = rand(100..200)
+.example
+  .function placeholder_tag(#{height}, #{width}, site: 'placebear', style: 'g')
+  .image
+    = placeholder_tag(height, width, site: 'placebear', style: 'g')
